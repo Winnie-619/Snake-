@@ -61,7 +61,7 @@ cmake --build build
 
 # 3. Run
 ./build/CoolSnake
-
+```
 **Windows (Developer Command Prompt / PowerShell)**
 # 1. Configure
 cmake -B build
@@ -71,12 +71,13 @@ cmake --build build --config Release
 
 # 3. Run
 .\build\Release\CoolSnake.exe
+```
 
-
-> **Note:** OOn Windows, MSVC places the executable in a Release (or Debug) subdirectory by default. Use --config Release with cmake --build and run from the matching folder.
+> **Note:** On Windows, MSVC places the executable in a `Release` (or `Debug`) subdirectory by default. Use `--config Release` with `cmake --build` and run from the matching folder.
 
 ### Build Options
 
+```bash
 # Debug build with Address Sanitizer (GCC/Clang)
 cmake -B build -DCMAKE_BUILD_TYPE=Debug -DENABLE_ASAN=ON
 cmake --build build
