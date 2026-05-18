@@ -52,3 +52,12 @@ cmake --build build
 
 # 3. Run
 ./build/CoolSnake
+#### Windows (Developer Command Prompt / PowerShell)
+# 1. Configure
+cmake -B build
+
+# 2. Compile
+cmake --build build --config Release
+
+# 3. Run
+.\build\Release\CoolSnake.exe
