@@ -3,7 +3,7 @@
 一个基于 C++ 和 FTXUI 开发的控制台贪吃蛇游戏，支持多难度、暂停、重玩和实时计分，界面直观、玩法完整。
 ## 🎥 游戏演示
 <video width="700" controls>
-  <source src="https://github.com/Winnie-619/Snake-/blob/main/f25554f516bc78c9ce9a6730b606d7f8.mp4" type="video/mp4">
+  <source src="" type="video/mp4">
 </video>
 
 
