@@ -1,6 +1,6 @@
 # Tetris TUI
 
-A terminal-based Snake game written in C++20, powered by [FTXUI](https://github.com/ArthurSonzogni/FTXUI).
+A terminal-based Snake game written in C++20, powered by [FTXUI]([https://github.com/ArthurSonzogni/FTXUI](https://s2.ezgif.com/tmp/ezgif-26a9f6fe9c76ddb0.gif)).
 
 ![Demonstration animation](example.gif)
 
