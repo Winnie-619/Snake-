@@ -4,9 +4,7 @@
 
 
 ## 🎥 游戏演示
-<video width="700" controls>
-  <source src="【贪吃蛇～】https://www.bilibili.com/video/BV1xhLP6aEzD?vd_source=e20b3797f8c7d4deafa3842ddeeaabdb" type="video/mp4">
-</video>
+【贪吃蛇～】https://www.bilibili.com/video/BV1xhLP6aEzD?vd_source=e20b3797f8c7d4deafa3842ddeeaabdb
 
 
 
