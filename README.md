@@ -1,7 +1,7 @@
 # 🐍 CoolSnake TUI
 A terminal-based Snake game written in C++20, powered by FTXUI.
 
-![Game Demo GIF](在这里替换成你的GIF地址)
+![Game Demo GIF](你的游戏演示GIF地址)
 
 ## Features
 - Classic snake movement with automatic forward progression
@@ -46,18 +46,32 @@ FTXUI is fetched automatically via CMake FetchContent — no manual dependency i
 ```bash
 # 1. Configure (generate build system)
 cmake -B build -DCMAKE_BUILD_TYPE=Release
-
 # 2. Compile
 cmake --build build
-
 # 3. Run
 ./build/CoolSnake
-#### Windows (Developer Command Prompt / PowerShell)
+Windows (Developer Command Prompt / PowerShell)
+bash
+运行
 # 1. Configure
 cmake -B build
-
 # 2. Compile
 cmake --build build --config Release
-
 # 3. Run
 .\build\Release\CoolSnake.exe
+Note: On Windows, MSVC places the executable in a Release (or Debug) subdirectory by default. Use --config Release with cmake --build and run from the matching folder.
+Build Options
+bash
+运行
+# Debug build with Address Sanitizer (GCC/Clang)
+cmake -B build -DCMAKE_BUILD_TYPE=Debug -DENABLE_ASAN=ON
+cmake --build build
+Project Structure
+plaintext
+CoolSnake/
+├── CMakeLists.txt      # Build configuration
+├── include/
+│   └── SnakeGame.h     # Game logic header
+├── src/
+│   └── main.cpp        # Game logic + FTXUI rendering
+└── README.md           # Project documentation
