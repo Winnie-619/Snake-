@@ -53,3 +53,10 @@ make
 
 # 4. 运行游戏
 ./CoolSnake
+CoolSnake/
+├── include/
+│   └── SnakeGame.h
+├── src/
+│   └── main.cpp
+├── CMakeLists.txt
+└── README.md
