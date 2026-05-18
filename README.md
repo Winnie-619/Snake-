@@ -1,62 +1,80 @@
-# 🐍 CoolSnake - 贪吃蛇游戏
+# 🐍 CoolSnake - 经典贪吃蛇游戏
+Classic snake game implemented in C++ using FTXUI library.
 
-一个基于 C++ 和 FTXUI 开发的控制台贪吃蛇游戏，支持多难度、暂停、重玩和实时计分，界面直观、玩法完整。
+## Features
+- Classic snake movement with automatic forward progression
+- Direction control with arrow keys (forbid 180° reverse movement)
+- Eat apple food to grow longer and gain score
+- Wall & self-body collision detection (game over on hit)
+- 3 difficulty levels (Easy / Normal / Hard) with adjustable speed
+- Real-time score display & final score show on game over
+- Start game by pressing space — pause/resume supported
+- Restart game anytime after game over
+- Unicode & emoji graphics (snake head, body, apple)
 
+## Controls
+| Key | Action |
+|-----|--------|
+| ← → ↑ ↓ | Move snake direction |
+| Space | Start game / Pause / Resume |
+| L / l | Switch difficulty level |
+| R / r | Restart new game |
+| Esc | Quit game |
 
-## 🎥 游戏演示
+## Scoring
+- Each apple eaten = 10 points
+- Score displayed in real-time during gameplay
+- Final score shown when game over
 
+Difficulty affects movement speed:
+- Easy: 220ms
+- Normal: 150ms
+- Hard: 80ms
 
-Uploading f25554f516bc78c9ce9a6730b606d7f8.mp4…
+## Build
+### Requirements
+| Tool | Minimum Version |
+|------|----------------|
+| CMake | 3.20 |
+| C++ compiler | C++20 (GCC 8+, Clang 7+, MSVC 2019+) |
 
+FTXUI is fetched automatically via CMake FetchContent — no manual dependency installation needed.
 
-
-
-
-## ✨ 功能特性
-- 经典贪吃蛇核心玩法：吃食物变长、撞墙/撞身死亡判定
-- 三档难度切换：简单 / 普通 / 困难，速度递增，挑战不同水平
-- 实时分数统计，游戏结束显示最终得分
-- 开局等待模式：按下空格键才开始游戏，避免误触
-- 一键暂停/继续、R键重新开局，支持无限次重复游玩
-- 方向键控制蛇移动，禁止180°掉头，防止误操作自杀
-- 彩色主题界面：🐍蛇头、▬蛇身、🍎苹果食物，元素清晰易区分
-
----
-
-## 🎮 操作说明
-| 按键 | 功能 |
-| :--- | :--- |
-| 方向键 ↑ ↓ ← → | 控制蛇的移动方向 |
-| 空格键 | 游戏开始 / 暂停 |
-| L 键 | 切换游戏难度（仅暂停状态可用） |
-| R 键 | 游戏结束后重新开局 |
-| ESC 键 | 退出游戏 |
-
----
-
-## 📦 编译与运行
-### 环境依赖
-- C++ 编译器（支持 C++20 标准）
-- CMake 3.16 及以上版本
-- FTXUI 终端UI库
-
-### 编译步骤
+### Compile & Run
+#### macOS / Linux
 ```bash
-# 1. 创建并进入 build 目录
-mkdir build && cd build
+# 1. Configure (generate build system)
+cmake -B build -DCMAKE_BUILD_TYPE=Release
 
-# 2. 生成构建文件
-cmake ..
+# 2. Compile
+cmake --build build
 
-# 3. 编译项目
-make
+# 3. Run
+./build/CoolSnake
+Windows (Developer Command Prompt / PowerShell)
+bash
+运行
+# 1. Configure
+cmake -B build
 
-# 4. 运行游戏
-./CoolSnake
+# 2. Compile
+cmake --build build --config Release
+
+# 3. Run
+.\build\Release\CoolSnake.exe
+Note: On Windows, MSVC places the executable in a Release (or Debug) subdirectory by default. Use --config Release with cmake --build and run from the matching folder.
+Build Options
+bash
+运行
+# Debug build (GCC/Clang)
+cmake -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build
+Project Structure
+plaintext
 CoolSnake/
+├── CMakeLists.txt      # Build configuration
 ├── include/
-│   └── SnakeGame.h
+│   └── SnakeGame.h      # Game logic header
 ├── src/
-│   └── main.cpp
-├── CMakeLists.txt
-└── README.md
+│   └── main.cpp         # Game logic + FTXUI rendering
+└── README.md            # Project documentation
