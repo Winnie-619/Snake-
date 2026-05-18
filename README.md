@@ -52,14 +52,24 @@ FTXUI is fetched automatically via CMake FetchContent — no manual dependency i
 
 **macOS / Linux**
 
+```bash
+# 1. Configure (generate build system)
 cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+# 2. Compile
 cmake --build build
+
+# 3. Run
 ./build/CoolSnake
 
 **Windows (Developer Command Prompt / PowerShell)**
-
+# 1. Configure
 cmake -B build
+
+# 2. Compile
 cmake --build build --config Release
+
+# 3. Run
 .\build\Release\CoolSnake.exe
 
 
